@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-require('./')(process.stdin, function (error, data) {
+var fs = require('fs')
+require('./')(
+  //process.stdin,
+  fs.createReadStream(process.argv[2]),
+  function (error, data) {
   if (error) {
     throw error
   } else {

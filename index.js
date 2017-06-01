@@ -1,7 +1,7 @@
 var Parser = require('node-expat').Parser
 var pump = require('pump')
 
-module.exports = function (xmlStream, callback) {
+module.exports = function (stream, callback) {
   var data = {}
   var currentElement = null
   var currentIndication = null
@@ -23,8 +23,9 @@ module.exports = function (xmlStream, callback) {
         }
       }
     })
-  pump(xmlStream, parser, function (error) {
+  pump(stream, parser, function (error) {
     if (error) {
+      console.error(error)
       callback(error)
     } else {
       callback(null, data)
