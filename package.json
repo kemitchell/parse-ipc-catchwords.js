@@ -1,0 +1,13 @@
+{
+  "name": "parse-ipc-catchwords",
+  "description": "parse International Patent Classifications catchwords XML files",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "bin": "parse-ipc-catchwords",
+  "dependencies": {
+    "node-expat": "^2.3.15",
+    "pump": "^1.0.2"
+  },
+  "license": "MIT",
+  "repository": "kemitchell/parse-ipc-catchwords.js"
+}

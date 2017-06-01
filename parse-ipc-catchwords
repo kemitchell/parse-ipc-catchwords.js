@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+require('./')(process.stdin, function (error, data) {
+  if (error) {
+    throw error
+  } else {
+    process.stdout.write(JSON.stringify(data, null, 2))
+  }
+})
