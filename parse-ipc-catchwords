@@ -5,7 +5,7 @@ require('./')(
   fs.createReadStream(process.argv[2]),
   function (error, data) {
   if (error) {
-    throw error
+    console.error(error)
   } else {
     process.stdout.write(JSON.stringify(data, null, 2))
   }
